@@ -271,11 +271,11 @@
         )
       )
     )
-    (symbol "power:+5V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:+12V" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "+5V" (at 0 3.556 0)
+      (property "Value" "+12V" (at 0 3.556 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -287,10 +287,10 @@
       (property "ki_keywords" "power-flag" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"+5V\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"+12V\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "+5V_0_1"
+      (symbol "+12V_0_1"
         (polyline
           (pts
             (xy -0.762 1.27)
@@ -316,9 +316,9 @@
           (fill (type none))
         )
       )
-      (symbol "+5V_1_1"
+      (symbol "+12V_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "+5V" (effects (font (size 1.27 1.27))))
+          (name "+12V" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -488,6 +488,44 @@
     )
   )
 
+  (symbol (lib_id "power:+12V") (at 42.545 31.75 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 2aee5af3-a1fd-4535-858b-9f766b0ced66)
+    (property "Reference" "#PWR060" (at 42.545 35.56 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+12V" (at 42.545 26.67 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 42.545 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 42.545 31.75 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2735e793-24c4-4ecd-917d-d9b969782fc3))
+    (instances
+      (project "3d_sla_printer"
+        (path "/42e3bda7-42fe-4a9a-b127-3e0d2b22ba14/d8aa4495-6084-4fc3-bfa1-98ba209b054d"
+          (reference "#PWR060") (unit 1)
+        )
+      )
+      (project "esp_automation"
+        (path "/beacb42a-3344-450f-9913-7e99b3038b5c/a33ae25d-c8a0-4eb2-9d87-c713d17e9e55"
+          (reference "#PWR042") (unit 1)
+        )
+        (path "/beacb42a-3344-450f-9913-7e99b3038b5c/fe915d4d-7262-4390-817b-c04a9b0d7da4"
+          (reference "#PWR018") (unit 1)
+        )
+      )
+      (project "Cold_Room_Controller"
+        (path "/ef7b0605-ef7d-4b5f-bcde-eac45c665c82/66d94c9d-33c9-49ba-a394-8f2119977178"
+          (reference "#PWR029") (unit 1)
+        )
+      )
+    )
+  )
+
   (symbol (lib_id "Device:R_Small_US") (at 73.66 69.215 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 8962810e-2a99-4eb5-b109-4eb9db1fb280)
@@ -512,31 +550,6 @@
       (project "esp_automation"
         (path "/beacb42a-3344-450f-9913-7e99b3038b5c/fe915d4d-7262-4390-817b-c04a9b0d7da4"
           (reference "R20") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:+5V") (at 42.545 31.75 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 93e9244f-8c17-417d-a470-d85993161aee)
-    (property "Reference" "#PWR033" (at 42.545 35.56 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "+5V" (at 42.545 27.94 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "" (at 42.545 31.75 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 42.545 31.75 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ea5690a6-57bf-4951-b95f-6c84098a715a))
-    (instances
-      (project "esp_automation"
-        (path "/beacb42a-3344-450f-9913-7e99b3038b5c/fe915d4d-7262-4390-817b-c04a9b0d7da4"
-          (reference "#PWR033") (unit 1)
         )
       )
     )
